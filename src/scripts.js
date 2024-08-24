@@ -11,12 +11,18 @@ function encriptar () {
         'o' : 'ober',
         'u' : 'ufat'}
 
-        let textoEncriptado = textoIngresado.replace(/[aeiou]/g, function(match) {
-            return reemplazos[match];
-        });
+        const excepciones = /[A-ZÁÉÍÓÚáéíóú]/
+
+        if (excepciones.test(textoIngresado)){
+            alert('El texto contiene letras mayúsculas o tildes.')
+        }else{
+            let textoEncriptado = textoIngresado.replace(/[aeiou]/g, function(match) {
+                return reemplazos[match];
+            })
+            document.getElementById('miTexto').textContent = textoEncriptado;
+        }
         
-        // Actualiza el contenido de un párrafo con el texto encriptado
-        document.querySelector('p').textContent = textoEncriptado;
+
     }
 
 function desencriptar () {
@@ -39,7 +45,7 @@ function desencriptar () {
         }
         
         // Actualiza el contenido de un párrafo con el texto encriptado
-        document.querySelector('p').textContent = textoDesencriptado;
+        document.getElementById('miTexto').textContent = textoDesencriptado;
 
 }
 

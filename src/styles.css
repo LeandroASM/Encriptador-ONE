@@ -57,14 +57,13 @@ header h1{
     display: none;
 }
 
-
-
 #textarea{
     resize: none;
     background-color: #f3f5fc;
     padding: 5%;
     border: none;
     outline: none;
+    font-size: 1rem;
 }
 
 #textarea::placeholder{
@@ -78,7 +77,6 @@ header h1{
     padding: 17px;
     display: flex;
     margin: 0 10px;
-
     justify-content: space-around;
 }
 
@@ -93,6 +91,7 @@ header h1{
     background-color: #0A3871;
     color: #D8DFE8;
 }
+
 .btn-enc:hover{
     background-color: #7a85b8;
     color: #0A3871;
@@ -102,6 +101,7 @@ header h1{
     background-color: #D8DFE8;
     color: #0A3871;
 }
+
 .btn-des:hover{
     background-color: #cccfdd;
     color: #0A3871;
@@ -128,11 +128,15 @@ header h1{
 p{
     padding: 25px;
     font-size: 1.2rem;
-
 }
 
+.advertencia{
+    color:rgb(129, 129, 129);
+    font-size: 1rem;
+}
 
-@media(max-width:1250px){
+@media(min-width: 601px) and (max-width: 1024px){
+ 
     .input-text{
         width: 60%;
     }
