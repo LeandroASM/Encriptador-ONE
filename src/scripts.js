@@ -59,3 +59,7 @@ function copiarTexto(idTxt){
    btn.innerHTML = "Copiado";
    setTimeout(()=>btn.innerText = btnLbl, 1200);
 }
+
+function clearTextarea () {
+    document.getElementById('textarea').value = ""
+}
