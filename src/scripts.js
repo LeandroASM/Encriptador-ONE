@@ -61,5 +61,6 @@ function copiarTexto(idTxt){
 }
 
 function clearTextarea () {
-    document.getElementById('textarea').value = ""
+    document.getElementById('textarea').value = "";
+    document.getElementById('miTexto').innerHTML = "";
 }
